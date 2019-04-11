@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamplant", "Hamplant\Hamplant.csproj", "{984E49A8-8005-4902-A79A-3C9CE0281910}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamplant.API", "Hamplant\Hamplant.API.csproj", "{984E49A8-8005-4902-A79A-3C9CE0281910}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamplant.DAL", "Hamplant.DAL\Hamplant.DAL.csproj", "{F3C31984-FA4A-41A0-ABB2-1002248ED355}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamplant.BLL", "Hamplant.BLL\Hamplant.BLL.csproj", "{5ED8758F-6425-4B5C-A0D5-CCDCCCC4D9EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamplant.Common", "Hamplant.Common\Hamplant.Common.csproj", "{CFC17AD1-C589-421E-80EE-F9A2AFBC531C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{984E49A8-8005-4902-A79A-3C9CE0281910}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{984E49A8-8005-4902-A79A-3C9CE0281910}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{984E49A8-8005-4902-A79A-3C9CE0281910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3C31984-FA4A-41A0-ABB2-1002248ED355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C31984-FA4A-41A0-ABB2-1002248ED355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C31984-FA4A-41A0-ABB2-1002248ED355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C31984-FA4A-41A0-ABB2-1002248ED355}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ED8758F-6425-4B5C-A0D5-CCDCCCC4D9EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ED8758F-6425-4B5C-A0D5-CCDCCCC4D9EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ED8758F-6425-4B5C-A0D5-CCDCCCC4D9EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ED8758F-6425-4B5C-A0D5-CCDCCCC4D9EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFC17AD1-C589-421E-80EE-F9A2AFBC531C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFC17AD1-C589-421E-80EE-F9A2AFBC531C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFC17AD1-C589-421E-80EE-F9A2AFBC531C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFC17AD1-C589-421E-80EE-F9A2AFBC531C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
