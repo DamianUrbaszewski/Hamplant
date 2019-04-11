@@ -67,6 +67,7 @@ dlldata.c
 *.svclog
 *.scc
 *.dtbcache
+*.ide
 
 # Chutzpah Test files
 _Chutzpah*
@@ -232,3 +233,4 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+/Hamplant/.vs/Hamplant/v16/Server/sqlite3/storage.ide
