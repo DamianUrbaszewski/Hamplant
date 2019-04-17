@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using static Hamplant.Common.Enums.GeneralEnums;
 
@@ -20,5 +21,7 @@ namespace Hamplant.DAL.Model
         public DateTime DateOfBirth { get; set; }
 
         public DateTimeOffset LastWriteTime { get; set; }
+
+        public virtual List<TeamMemeber> TeamMemebers { get; set; }
     }
 }

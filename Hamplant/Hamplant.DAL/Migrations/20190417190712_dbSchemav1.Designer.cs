@@ -3,15 +3,17 @@ using System;
 using Hamplant.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Hamplant.DAL.Migrations
 {
     [DbContext(typeof(HamplantContext))]
-    partial class HamplantContextModelSnapshot : ModelSnapshot
+    [Migration("20190417190712_dbSchemav1")]
+    partial class dbSchemav1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

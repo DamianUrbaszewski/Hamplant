@@ -8,5 +8,13 @@
             Female,
             Other
         }
+
+        public enum SupplyStatus
+        {
+            Full,
+            Low,
+            Lack,
+            Expired
+        }
     }
 }
