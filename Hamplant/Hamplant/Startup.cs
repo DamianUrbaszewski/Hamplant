@@ -1,12 +1,16 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Hamplant.AppStart;
+using Hamplant.BLL;
 using Hamplant.DAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace Hamplant
 {
@@ -20,7 +24,7 @@ namespace Hamplant
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
@@ -32,6 +36,12 @@ namespace Hamplant
 
             services.AddDbContext<HamplantContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+
+            var builder = new ContainerBuilder();
+            builder.RegisterModule<WebApiModule>();
+            builder.RegisterModule<BusinessLogicModule>();
+            builder.Populate(services);
+            return new AutofacServiceProvider(builder.Build());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
