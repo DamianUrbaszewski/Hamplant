@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using MediatR.Extensions.Autofac.DependencyInjection;
 
 namespace Hamplant.AppStart
 {
@@ -7,6 +8,7 @@ namespace Hamplant.AppStart
         protected override void Load(ContainerBuilder builder)
         {
             base.Load(builder);
+            builder.AddMediatR(typeof(Program).Assembly);
         }
     }
 }
